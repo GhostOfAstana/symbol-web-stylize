@@ -1,0 +1,105 @@
+/* Базовая сетка рассчитана на узкий экран; колонки добавляются при наличии места. */
+@media(min-width:768px) {
+  .shell {
+    padding: 0 36px
+  }
+
+  .workspace {
+    grid-template-columns: minmax(0,2fr) minmax(240px,1fr)
+  }
+
+  .panel {
+    padding: 28px
+  }
+
+  .palette-grid {
+    grid-template-columns: repeat(3,minmax(0,1fr))
+  }
+
+  .intro {
+    padding-top: 76px
+  }
+
+  .theme-section {
+    padding: 32px
+  }
+
+}
+
+@media(min-width:1400px) {
+  .shell {
+    max-width: 1352px
+  }
+
+  .intro {
+    padding-top: 90px;
+    padding-bottom: 56px
+  }
+
+}
+
+@media(max-width:580px) {
+  .shell {
+    padding: 0 16px
+  }
+
+  .site-header {
+    min-height: 110px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px 0;
+    gap: 10px
+  }
+
+  .site-header nav {
+    gap: 15px;
+    flex-wrap: wrap
+  }
+
+  .site-header nav button {
+    padding: 5px 10px;
+    min-height: 40px
+  }
+
+  .intro {
+    padding: 42px 0 28px
+  }
+
+  .panel {
+    padding: 20px
+  }
+
+  .field-row>button {
+    width: 100%
+  }
+
+  .sample {
+    padding: 10px 4px
+  }
+
+  .sample p {
+    display: none
+  }
+
+  .output-heading>button {
+    width: 100%
+  }
+
+  .theme-actions .quiet {
+    flex-grow: 1
+  }
+
+  .palette-card {
+    padding: 16px
+  }
+
+  .color-fields {
+    gap: 10px
+  }
+
+  #art-output {
+    padding: 12px
+  }
+
+}

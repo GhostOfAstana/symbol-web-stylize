@@ -1,0 +1,26 @@
+name: Проверки
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Форматирование
+        run: test -z "$(gofmt -l .)"
+      - name: Статическая проверка
+        run: go vet ./...
+      - name: Проверка гонок и сценариев отказа
+        run: go test -race -count=1 ./...
+      - name: Память стиля и контраст в браузерной логике
+        run: node --test static/js/palette.test.cjs

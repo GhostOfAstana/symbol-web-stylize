@@ -1,0 +1,4 @@
+* text=auto eol=lf
+standard.txt -text
+shadow.txt -text
+thinkertoy.txt -text

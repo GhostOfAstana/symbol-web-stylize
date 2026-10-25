@@ -1,0 +1,119 @@
+/* Свотчи декоративны; названия и пояснения используют проверенную пару фон/текст. */
+.palette-grid {
+  display: grid;
+  gap: 14px
+}
+
+.palette-card {
+  border: 1px solid var(--text-color);
+  border-radius: 9px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px
+}
+
+.palette-card h3 {
+  font-size: 1.02rem
+}
+
+.palette-card p {
+  font-size: .82rem;
+  margin: 0
+}
+
+.palette-card button {
+  align-self: start;
+  margin-top: auto
+}
+
+.swatches {
+  display: flex;
+  height: 42px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  overflow: hidden
+}
+
+.swatch {
+  flex: 1;
+  min-width: 0
+}
+
+.palette-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em
+}
+
+.theme-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 24px 0
+}
+
+.custom-theme {
+  padding: 18px 0;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color)
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700
+}
+
+summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px
+}
+
+.custom-theme form {
+  margin-top: 16px;
+  max-width: 640px
+}
+
+.color-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0
+}
+
+.color-fields label {
+  font-size: .8rem;
+  min-width: 70px
+}
+
+.color-fields input {
+  display: block;
+  width: 64px;
+  height: 40px;
+  padding: 2px;
+  cursor: pointer;
+  background: var(--bg-color);
+  border: 1px solid var(--text-color);
+  border-radius: 4px
+}
+
+.saved-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px
+}
+
+.saved-palettes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 12px
+}
+
+.saved-palettes p {
+  font-size: .82rem;
+  margin: 0
+}
